@@ -19,7 +19,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
     _refreshBillLogs();
   }
 
-  // Fetch or refresh data from SQLite local database
+
   Future<void> _refreshBillLogs() async {
     setState(() => _isLoading = true);
     final data = await DatabaseHelper.instance.queryAllBills();
@@ -72,12 +72,12 @@ class _HistoryScreenState extends State<HistoryScreen> {
                 foregroundColor: Colors.white,
                 child: Icon(Icons.receipt_long),
               ),
-              // Rubric requirement: Display Month only
+
               title: Text(
                 bill['month'],
                 style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
-              // Rubric requirement: Display Final Cost only
+
               trailing: Text(
                 'RM ${bill['final_cost'].toStringAsFixed(2)}',
                 style: const TextStyle(
@@ -91,7 +91,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                 style: TextStyle(fontSize: 12, color: Colors.grey[600]),
               ),
               onTap: () async {
-                // Open detail view and wait for a return value to check if database changed
+
                 final result = await Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -99,7 +99,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                   ),
                 );
                 if (result == true) {
-                  _refreshBillLogs(); // Refresh list if edit or delete happened
+                  _refreshBillLogs();
                 }
               },
             ),

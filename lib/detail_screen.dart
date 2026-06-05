@@ -16,7 +16,7 @@ class _DetailScreenState extends State<DetailScreen> {
   late String _currentMonth;
   late double _currentRebate;
 
-  // Variables to hold fresh updates on edit calculations
+
   late double _calculatedCharges;
   late double _calculatedFinal;
 
@@ -63,13 +63,13 @@ class _DetailScreenState extends State<DetailScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Database entry updated successfully!'), backgroundColor: Colors.green),
         );
-        Navigator.pop(context, true); // Return true to signal historical refresh operations
+        Navigator.pop(context, true);
       }
     }
   }
 
   Future<void> _deleteRecord() async {
-    // Show confirmation dialog before deleting data
+
     bool confirm = await showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -116,7 +116,7 @@ class _DetailScreenState extends State<DetailScreen> {
               const Text('Database Record Modifiers', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.teal)),
               const SizedBox(height: 12),
 
-              // Month Selector
+
               DropdownButtonFormField<String>(
                 value: _currentMonth,
                 decoration: const InputDecoration(labelText: 'Billing Month', border: OutlineInputBorder()),
@@ -128,7 +128,7 @@ class _DetailScreenState extends State<DetailScreen> {
               ),
               const SizedBox(height: 16),
 
-              // Unit Usage Editor
+
               TextFormField(
                 controller: _unitsController,
                 keyboardType: TextInputType.number,
@@ -143,7 +143,7 @@ class _DetailScreenState extends State<DetailScreen> {
               ),
               const SizedBox(height: 16),
 
-              // Rebate Slider Modifier
+
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -187,7 +187,7 @@ class _DetailScreenState extends State<DetailScreen> {
               ),
               const SizedBox(height: 24),
 
-              // Structural Database Management Actions Interface Triggers
+
               ElevatedButton.icon(
                 onPressed: _updateRecord,
                 icon: const Icon(Icons.check),

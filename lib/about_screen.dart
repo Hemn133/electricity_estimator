@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
 
-  // Method to launch your project's GitHub URL in a web browser
+
   Future<void> _launchGitHubUrl(BuildContext context) async {
     // TODO: Replace this placeholder string with your actual repository link
     final Uri gitHubUri = Uri.parse('https://github.com/yourusername/electricity_estimator');
@@ -82,7 +82,7 @@ class AboutScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // Clickable GitHub Resource Trigger
+
             ElevatedButton.icon(
               onPressed: () => _launchGitHubUrl(context),
               icon: const Icon(Icons.code),
@@ -96,7 +96,7 @@ class AboutScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            // Detailed App Operational Instructions Manual Guide
+
             const Text('Application Operational Guide', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.teal)),
             const SizedBox(height: 8),
             Card(
@@ -119,7 +119,7 @@ class AboutScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
 
-            // Copyright Statement Footer
+
             Center(
               child: Text(
                 '© 2026 VoltCalc Pro. All Rights Reserved.',

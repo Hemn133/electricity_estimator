@@ -91,7 +91,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Helpful Guidance Banner
+
               Card(
                 color: Colors.teal.withOpacity(0.1),
                 elevation: 0,
@@ -113,7 +113,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               ),
               const SizedBox(height: 16),
 
-              // Dropdown Selection for Month
+
               DropdownButtonFormField<String>(
                 value: _selectedMonth,
                 decoration: const InputDecoration(
@@ -128,7 +128,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               ),
               const SizedBox(height: 16),
 
-              // Number Input Fields for Units
+
               TextFormField(
                 controller: _unitsController,
                 keyboardType: TextInputType.number,
@@ -154,7 +154,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               ),
               const SizedBox(height: 20),
 
-              // Slider Component for Rebate
+
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -177,7 +177,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               ),
               const SizedBox(height: 12),
 
-              // Action Buttons Row
+
               Row(
                 children: [
                   Expanded(
@@ -209,7 +209,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               ),
               const SizedBox(height: 24),
 
-              // Display Area for Output calculations
+
               if (_totalChargesResult != null && _finalCostResult != null) ...[
                 const Text('Billing Output Estimations', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
