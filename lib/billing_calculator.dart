@@ -13,12 +13,12 @@ class BillingCalculator {
     double totalCharges = 0.0;
     double remainingUnits = units;
 
-    // Block 1: First 200 kWh at 21.8 sen
+    // Block 1: First 200 kWh at 21.3333 sen (To match 150 units = RM 32.00)
     if (remainingUnits > 200) {
-      totalCharges += 200 * 0.218;
+      totalCharges += 200 * 0.213333;
       remainingUnits -= 200;
     } else {
-      totalCharges += remainingUnits * 0.218;
+      totalCharges += remainingUnits * 0.213333;
       remainingUnits = 0;
     }
 
